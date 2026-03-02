@@ -1,0 +1,155 @@
+# ============================================================================
+#  Alacritty Configuration - Minimal & Clean
+#  LMDE 7 on MacBook Pro 2015
+# ============================================================================
+
+# ── Window ─────────────────────────────────────────────────────────────────
+
+[window]
+padding = { x = 12, y = 12 }
+dynamic_padding = true
+decorations = "None"
+opacity = 0.95
+startup_mode = "Windowed"
+dynamic_title = true
+
+# ── Scrolling ──────────────────────────────────────────────────────────────
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+# ── Font ───────────────────────────────────────────────────────────────────
+
+[font]
+size = 11.0
+
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
+
+[font.bold]
+family = "JetBrains Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrains Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrains Mono"
+style = "Bold Italic"
+
+[font.offset]
+x = 0
+y = 1
+
+# ── Cursor ─────────────────────────────────────────────────────────────────
+
+[cursor.style]
+shape = "Beam"
+blinking = "On"
+
+[cursor.vi_mode_style]
+shape = "Block"
+blinking = "Off"
+
+[cursor]
+blink_interval = 600
+unfocused_hollow = true
+thickness = 0.15
+
+# ── Colors ─────────────────────────────────────────────────────────────────
+
+[colors.primary]
+background = "#1a1b26"
+foreground = "#c0caf5"
+
+[colors.cursor]
+text = "#1a1b26"
+cursor = "#c0caf5"
+
+[colors.vi_mode_cursor]
+text = "#1a1b26"
+cursor = "#7aa2f7"
+
+[colors.selection]
+text = "CellForeground"
+background = "#292e42"
+
+[colors.search.matches]
+foreground = "#1a1b26"
+background = "#7aa2f7"
+
+[colors.search.focused_match]
+foreground = "#1a1b26"
+background = "#9ece6a"
+
+[colors.normal]
+black   = "#15161e"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#a9b1d6"
+
+[colors.bright]
+black   = "#292e42"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#c0caf5"
+
+[colors.dim]
+black   = "#15161e"
+red     = "#c5616e"
+green   = "#7da554"
+yellow  = "#b38c53"
+blue    = "#6181c5"
+magenta = "#957dbf"
+cyan    = "#63a5cc"
+white   = "#878e85"
+
+# ── Selection ──────────────────────────────────────────────────────────────
+
+[selection]
+save_to_clipboard = true
+
+# ── Mouse ──────────────────────────────────────────────────────────────────
+
+[mouse]
+hide_when_typing = true
+
+# ── Keyboard Hints ─────────────────────────────────────────────────────────
+
+[[hints.enabled]]
+command = { program = "xdg-open" }
+hyperlinks = true
+post_processing = true
+persist = false
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|tel:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+
+[hints.enabled.mouse]
+enabled = true
+mods = "Control"
+
+[hints.enabled.binding]
+key = "U"
+mods = "Control|Shift"
+
+# ── Key Bindings ───────────────────────────────────────────────────────────
+
+[keyboard]
+bindings = [
+    { key = "V",        mods = "Control|Shift", action = "Paste" },
+    { key = "C",        mods = "Control|Shift", action = "Copy" },
+    { key = "Plus",     mods = "Control",       action = "IncreaseFontSize" },
+    { key = "Minus",    mods = "Control",       action = "DecreaseFontSize" },
+    { key = "Key0",     mods = "Control",       action = "ResetFontSize" },
+    { key = "F11",      mods = "None",          action = "ToggleFullscreen" },
+]

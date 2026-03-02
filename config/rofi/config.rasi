@@ -1,0 +1,106 @@
+/* ============================================================================
+ *  Rofi Configuration - Minimal & Clean
+ *  Dark theme matching the Tokyo Night-inspired color palette
+ * ========================================================================== */
+
+configuration {
+    modi:                "drun,run,window";
+    show-icons:          true;
+    icon-theme:          "Papirus-Dark";
+    display-drun:        " Apps";
+    display-run:         " Run";
+    display-window:      " Windows";
+    drun-display-format: "{name}";
+    font:                "JetBrains Mono 11";
+    click-to-exit:       true;
+}
+
+/* ── Theme ────────────────────────────────────────────────────────────── */
+
+* {
+    bg:          #1a1b26;
+    bg-alt:      #292e42;
+    fg:          #c0caf5;
+    fg-alt:      #a9b1d6;
+    accent:      #7aa2f7;
+    urgent:      #f7768e;
+    transparent: rgba(0, 0, 0, 0);
+
+    background-color: @transparent;
+    text-color:       @fg;
+
+    margin:  0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    location:         center;
+    width:            520;
+    border:           2px;
+    border-color:     @accent;
+    border-radius:    8px;
+    background-color: @bg;
+}
+
+mainbox {
+    background-color: @bg;
+    children:         [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @bg;
+    padding:          14px 16px;
+    spacing:          12px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    background-color: @accent;
+    text-color:       @bg;
+    padding:          6px 12px;
+    border-radius:    4px;
+    font:             "JetBrains Mono Bold 10";
+}
+
+entry {
+    background-color: @bg;
+    text-color:       @fg;
+    placeholder:      "Search...";
+    placeholder-color: @fg-alt;
+    padding:          6px 0px;
+}
+
+listview {
+    background-color: @bg;
+    columns:          1;
+    lines:            8;
+    padding:          8px 0px;
+    fixed-height:     true;
+    fixed-columns:    true;
+    scrollbar:        false;
+}
+
+element {
+    background-color: @bg;
+    text-color:       @fg-alt;
+    padding:          10px 16px;
+    spacing:          12px;
+}
+
+element selected {
+    background-color: @bg-alt;
+    text-color:       @accent;
+    border-radius:    0px;
+}
+
+element-icon {
+    size:             24px;
+    background-color: @transparent;
+}
+
+element-text {
+    background-color: @transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
